@@ -58,7 +58,7 @@ blobs:
   -
     provider: gs
     bucket: aserto-cli
-    folder: "aserto/{{ .Version }}"
+    folder: "aserto-test/{{ .Version }}"
     extra_files:
       - glob: VERSION.txt
   -
