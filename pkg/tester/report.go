@@ -1,3 +1,9 @@
+// Adopted from https://github.com/open-policy-agent/opa/blob/main/tester/reporter.go
+//
+// Copyright 2017 The OPA Authors.  All rights reserved.
+// Use of this source code is governed by an Apache2
+// license that can be found in the LICENSE file.
+//
 package tester
 
 import (
@@ -21,7 +27,6 @@ type PrettyReporter struct {
 
 // Report prints the test report to the reporter's output.
 func (r PrettyReporter) Report(ch []*TestResult) error {
-
 	dirty := false
 	var pass, fail, skip, errs int
 	results := make([]*TestResult, len(ch))

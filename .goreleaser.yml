@@ -34,7 +34,7 @@ archives:
       windows: windows
       amd64: x86_64
     files:
-      - LICENSE
+      - LICENSE.md
       - README.md
     name_template: "aserto-test_{{ .Os }}_{{ .Arch }}"
 

@@ -10,7 +10,7 @@ import (
 )
 
 type CLI struct {
-	Enum    EnumCmd    `cmd:"" help:"enumerate policy IDs"`
+	Enum    EnumCmd    `cmd:"" help:"enumerate policy IDs" hidden:""`
 	List    ListCmd    `cmd:"" help:"list tests"`
 	Run     RunCmd     `cmd:"" help:"run tests"`
 	Service ServiceCmd `cmd:"" help:"service commands"`
