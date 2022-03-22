@@ -36,7 +36,7 @@ archives:
     files:
       - LICENSE
       - README.md
-    name_template: "aserto-test_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+    name_template: "aserto-test_{{ .Os }}_{{ .Arch }}"
 
 checksum:
   name_template: 'checksums.txt'
@@ -52,13 +52,21 @@ changelog:
       - '^test:'
 
 release:
-  github:
-    owner: aserto-dev
-    name: aserto-test
+  disable: true
 
-  draft: false
-  prerelease: false
-  name_template: "Aserto Test {{.Tag}}"
+blobs:
+  -
+    provider: gs
+    bucket: aserto-cli
+    folder: "aserto/{{ .Version }}"
+    extra_files:
+      - glob: VERSION.txt
+  -
+    provider: gs
+    bucket: aserto-cli
+    folder: "aserto-test/latest"
+    extra_files:
+      - glob: VERSION.txt
 
 brews:
   -
@@ -66,19 +74,18 @@ brews:
 
     tap:
       owner: aserto-dev
-      name: aserto-tap
+      name: homebrew-tap
       token: "{{ .Env.HOMEBREW_TAP }}"
 
-    url_template: "https://github.com/aserto-dev/aserto-test/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
+    url_template: "https://storage.googleapis.com/aserto-cli/aserto-test/{{ .Version }}/{{ .ArtifactName }}"
 
-    download_strategy: CustomGitHubPrivateRepositoryReleaseDownloadStrategy
-    custom_require: "lib/custom_download_strategy"
+    download_strategy: CurlDownloadStrategy
 
     commit_author:
       name: Aserto Bot
       email: github-bot@aserto.com
 
-    homepage: "https://aserto.com/"
+    homepage: "https://docs.aserto.com/"
 
     description: "Aserto Test Runner"
 
