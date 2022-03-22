@@ -1,0 +1,14 @@
+{
+    "cSpell.words": [
+        "aserto",
+        "authz",
+        "deps",
+        "golangci",
+        "goreleaser",
+        "gotest",
+        "gotestsum",
+        "rego",
+        "structpb",
+        "sver"
+    ]
+}
