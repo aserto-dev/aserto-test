@@ -4,18 +4,18 @@ go 1.17
 
 require (
 	github.com/alecthomas/kong v0.5.0
-	github.com/aserto-dev/aserto-go v0.8.4
-	github.com/aserto-dev/go-grpc v0.8.6
+	github.com/aserto-dev/aserto-go v0.8.5
+	github.com/aserto-dev/go-grpc v0.8.12
 	github.com/aserto-dev/go-grpc-authz v0.8.0
-	github.com/aserto-dev/mage-loot v0.8.2
+	github.com/aserto-dev/mage-loot v0.8.4
 	github.com/magefile/mage v1.13.0
 	github.com/pkg/errors v0.9.1
-	google.golang.org/grpc v1.45.0
-	google.golang.org/protobuf v1.27.1
+	google.golang.org/grpc v1.46.0
+	google.golang.org/protobuf v1.28.0
 )
 
 require (
-	github.com/aserto-dev/clui v0.8.0 // indirect
+	github.com/aserto-dev/clui v0.8.1 // indirect
 	github.com/fatih/color v1.13.0 // indirect
 	github.com/fsnotify/fsnotify v1.5.1 // indirect
 	github.com/gitleaks/go-gitdiff v0.7.4 // indirect
@@ -28,7 +28,7 @@ require (
 	github.com/mattn/go-colorable v0.1.12 // indirect
 	github.com/mattn/go-isatty v0.0.14 // indirect
 	github.com/mattn/go-runewidth v0.0.13 // indirect
-	github.com/mitchellh/mapstructure v1.4.3 // indirect
+	github.com/mitchellh/mapstructure v1.5.0 // indirect
 	github.com/olekukonko/tablewriter v0.0.5 // indirect
 	github.com/pelletier/go-toml v1.9.4 // indirect
 	github.com/rivo/uniseg v0.2.0 // indirect
@@ -46,7 +46,7 @@ require (
 	golang.org/x/sys v0.0.0-20220319134239-a9b59b0215f8 // indirect
 	golang.org/x/term v0.0.0-20210927222741-03fcf44c2211 // indirect
 	golang.org/x/text v0.3.7 // indirect
-	google.golang.org/genproto v0.0.0-20220322021311-435b647f9ef2 // indirect
+	google.golang.org/genproto v0.0.0-20220422154200-b37d22cd5731 // indirect
 	gopkg.in/ini.v1 v1.66.4 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
